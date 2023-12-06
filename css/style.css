@@ -1,0 +1,35 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.curved {
+  position: relative;
+  background: #2c3e50;
+  height: 75vh;
+  border-bottom-left-radius: 50% 18%;
+  border-bottom-right-radius: 50% 18%;
+}
+
+.header-picture img{
+    height: 75vh;
+}
+
+/* Tablets in portrait mode */
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  /* Your styles for tablets in portrait mode */
+  .curved{
+    height: 50vh;
+  }
+  .header-picture img{
+    height: 50vh;
+}
+}
+/* Mobile phones in portrait mode */
+@media only screen and (max-width: 599px) {
+    .header-text p{
+        text-align: left;
+    }
+    .header-picture img{
+    height: 50vh;
+    margin-top: -20px;
+}
+}   
