@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Narain</title>
+    <title>Theatre Booking</title>
     <!-- Bootstrap CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -17,7 +17,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- Custom style sheet -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,61 +25,118 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/actions.js"></script>
   </head>
-
   <body>
-    <main class="curved container-fluid">
-      <!-- Header Block -->
-      <header class="container mt-5">
-        <!-- Navigation Bar -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid ps-3">
-            <a href="#" class="navbar-brand d-flex align-items-center">
-              <!-- <img
-                src="/assests/favicon-32x32.png"
-                class="px-3"
-                alt="Navbar logo"
-              /> -->
-              <span class="fw-bolder">Booking</span>
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse justify-content-end pe-lg-5 align-items-center navbar-collapse text-center"
-              id="navbarNavDropdown"
-            >
-              <div class="navbar-nav text-center my-sm-2 align-items-center">
-                <button class="btn btn-outline-danger rounded-pill px-3">
-                  Log Out
+    <main class="curved">
+
+        <section class=" d-flex align-items-center justify-content-center vh-100">
+          <div class="left w-50">
+            <img src="assests/header-img.svg" alt="">
+          </div>
+          <div class="right w-50">
+            <div class="glass p-5">
+              <div class="btn-group d-flex justify-content-center" role="group">
+                <button class="btn" type="button" id="login-toggler">Login</button>
+                <button class="btn" type="button" id="register-toggler">
+                  Register
                 </button>
+              </div>
+    
+              <div id="login" class="collapse px-2 py-3">
+                <!-- Login -->
+                <form>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control "
+                      id="usermail"
+                      placeholder="name@example.com"
+                    />
+                    <label for="usermail">Email address</label>
+                  </div>
+                  <div class="form-floating">
+                    <input
+                      type="password"
+                      class="form-control "
+                      id="userpwd"
+                      placeholder="Password"
+                    />
+                    <label for="userpwd">Password</label>
+                  </div>
+                  <div class="text-center m-3">
+                    <button type="button" class="btn py-2 px-4 rounded-pill"> Login </button>
+                  </div>
+                </form>
+              </div>
+              <div id="register" class="collapse px-2 py-3">
+                <!-- Register -->
+                <form>
+                    <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="regEmail"
+                      placeholder="name@example.com"
+                    />
+                    <label for="regEmail">Email address</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="regpwd"
+                      placeholder="Password"
+                    />
+                    <label for="regpwd">Password</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="regcnfpwd"
+                      placeholder="Password"
+                    />
+                    <label for="regcnfpwd">Confirm Password</label>
+                  </div>
+                  <div class="text-center m-3">
+                    <button type="button" class="btn py-2 px-4 rounded-pill"> Register </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-        </nav>
-      </header>
-      <section class="mt-5 pt-5">
-        <div class="header-text w-75 mx-auto text-center">
-          <h1 class="fw-bold fs-1 text-light mb-md-3">
-            Book your seats, get unwinded
-          </h1>
-          <p class="text-light lead">
-            Indulge in Spectacular Performances – Reserve Your Seats for
-            Unforgettable Moments on Stage!
-          </p>
-          <div class="header-picture mx-auto">
-            <img src="assests/header-img.svg" alt="" class="img-fluid" />
-          </div>
-        </div>
-      </section>
+          <!-- <div class="row">
+            <div class="glass col-md-6 mx-auto text-center p-4">
+              <button
+                class="btn btn-outline-danger"
+                type="button"
+                id="login-toggler"
+              >
+                Login
+              </button>
+              <button
+                class="btn btn-outline-light"
+                type="button"
+                id="register-toggler"
+              >
+                Register
+              </button>
+    
+              <div id="login" class="collapse"> -->
+          <!-- Login -->
+          <!-- <form><label for="username">Login</label><br /></form>
+              </div>
+              <div id="register" class="collapse"> -->
+          <!-- Register -->
+          <!-- <form><label for="username">Register</label><br /></form>
+              </div>
+            </div> -->
+          <!-- </div> -->
+        </section>
     </main>
   </body>
 </html>

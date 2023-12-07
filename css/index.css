@@ -1,0 +1,47 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.curved {
+  position: relative;
+  background: #2c3e50;
+  height: 50vh;
+  border-bottom-left-radius: 50% 18%;
+  border-bottom-right-radius: 50% 18%;
+}
+
+.glass{
+    background: rgba(0, 0, 0, 0.5);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.btn{
+    color: #fff;
+    background-color: #ff4800;  ;
+}
+
+.btn:hover{
+    color: #ff4800;
+    background-color: #fff;
+    
+}
+.btn:active,.btn:focus{
+    color: #fff;
+    font-weight: bolder;
+    background-color: #ffffff00;
+    border: solid 3px #ff4800;
+}
+
+/* Tablets in portrait mode */
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+  /* Your styles for tablets in portrait mode */
+  .curved{
+    height: 50vh;
+  }
+}
+/* Mobile phones in portrait mode */
+@media only screen and (max-width: 599px) {
+}   
